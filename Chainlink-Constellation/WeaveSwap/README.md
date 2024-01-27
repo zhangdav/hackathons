@@ -2,7 +2,7 @@
 
 WeaveSwap is a decentralized cross-chain swap application developed as part of the Chainlink Hackathon. The platform leverages Chainlink technology to enable seamless and secure swapping of assets across different blockchain networks.
 
-![24151702113791_ pic](https://github.com/Solidityarchitect/WeaveSwap/assets/125990317/79e42cc3-5405-4465-844d-5d993b3a7456)
+<img width="1403" alt="image" src="https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/d1b930b7-48a8-4679-ad13-7a53c23c45a8">
 
 [![David Zhang YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=WkyqA-yN4OU&t=2s)
 
