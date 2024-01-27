@@ -9,17 +9,9 @@ CrossChain AI NFT Generator trains original style AI models for artists through 
 <img width="915" alt="image" src="https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/c28a484b-d25a-4f28-9d89-205f59a4df1a">
 
 
-[![David Zhang YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=qTY0G015GJ0&t=2s)
+## ETHGlobal Online2023:
 
-## Chianlink Hackathon Constellation:
-
-<br/>
-<p align="center">
-<a href="https://devpost.com/software/happy-planet?ref_content=user-portfolio&ref_feature=in_progress" target="_blank">
-<img src="https://raw.githubusercontent.com/smartcontractkit/chainlink/develop/docs/logo-chainlink-blue.svg" width="225" alt="Chainlink logo">
-</a>
-</p>
-<br/>
+https://ethglobal.com/showcase/happy-planet-wd5s8
 
 ## Requirements For Initial Setup
 
