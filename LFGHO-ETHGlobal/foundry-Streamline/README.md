@@ -1,8 +1,7 @@
 ## Streamline
 
-<img width="1412" alt="image" src="https://github.com/Solidityarchitect/foundry-streamline/assets/125990317/99ff29a7-8788-4ca0-b8c2-0e8a29f1a072">
-<img width="1419" alt="image" src="https://github.com/Solidityarchitect/foundry-streamline/assets/125990317/27b31dcc-9cd2-4499-9143-85ee858aab0b">
-<img width="1418" alt="image" src="https://github.com/Solidityarchitect/foundry-streamline/assets/125990317/0ecd80b9-781d-4262-a2c9-0eed8099be59">
+![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/cd7effc8-2215-4fc3-8237-f5a780850f0e)
+
 
 **We automate the process of:**
 
@@ -26,8 +25,13 @@ The receivers can easily join the service and claim payments using AA powered so
 
 • chainlink automation used to repay GHO debt when the yield generated from principal position deposit covers the debt
 
-<img width="1412" alt="image" src="https://github.com/Solidityarchitect/foundry-streamline/assets/125990317/d909f9d6-8b4d-4096-be48-fa734f011d3d">
-<img width="1412" alt="image" src="https://github.com/Solidityarchitect/foundry-streamline/assets/125990317/a1bab021-63d1-4aad-9979-8a55a9595d05">
+![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/53cb14f4-a811-469a-94fc-2b6b383737b1)
+
+![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/dc3a41c7-1919-4630-b6df-d5c046ad8b28)
+
+![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/3539afc5-fd62-400c-a13d-f60290de5c7d)
+
+![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/524df5ec-fc18-4151-bd6a-51c6b8240cd9)
 
 ## StreamLine Video:
 
