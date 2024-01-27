@@ -1,0 +1,20 @@
+.footerBg > div {
+  padding: 2em;
+  z-index: 100;
+  position: absolute;
+  width: 100vw;
+  left: 0px;
+  bottom: 0;
+  z-index: -1;
+  max-width: 100%;
+}
+.footerBg {
+  padding: 3em;
+  position: relative;
+  width: 100vw;
+  display: block;
+  background-color: transparent !important;
+  background: transparent !important;
+  margin: auto;
+  background-color: rgb(37, 37, 37);
+}

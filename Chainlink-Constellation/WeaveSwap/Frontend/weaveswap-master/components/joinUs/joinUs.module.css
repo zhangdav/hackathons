@@ -1,0 +1,51 @@
+.JoinUs {
+  background-color: black;
+  border-radius: 1em;
+  width: 90%;
+  -webkit-box-shadow: 0px 0px 18px -6px rgba(4, 255, 0, 0.9);
+  -moz-box-shadow: 0px 0px 18px -6px rgba(4, 255, 0, 0.9);
+  box-shadow: 0px 0px 18px -6px rgba(4, 255, 0, 0.9);
+  margin: auto;
+  padding: 2em;
+  margin: 8em auto;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.JoinUs h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.JoinUs section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+.JoinUs section img {
+  width: 100px;
+}
+.JoinUs section p {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 509px) {
+  .JoinUs section img {
+    width: 50px;
+  }
+}

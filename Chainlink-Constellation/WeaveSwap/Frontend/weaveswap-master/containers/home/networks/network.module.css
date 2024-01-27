@@ -1,0 +1,103 @@
+.countUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  border-radius: 1em;
+  border-width: 1px;
+  border-right-width: 0 !important;
+  border-left-width: 0 !important;
+  border-style: solid;
+  border-image-source: linear-gradient(
+    to right,
+    rgb(46, 139, 0),
+    rgb(50, 204, 53)
+  );
+  border-image-slice: 1;
+  padding: 1em;
+  animation: gradientAnimation 2s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    border-image-source: linear-gradient(
+      to right,
+      rgb(37, 139, 0),
+      rgb(50, 204, 53)
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      to right,
+      rgb(50, 204, 63),
+      rgb(0, 139, 28)
+    );
+  }
+}
+
+.countUp h4 {
+  font-size: 3em;
+  font-family: "Bruno Ace", cursive;
+}
+.countUp p {
+  color: beige;
+  font-size: 1em;
+  font-style: italic;
+}
+.networkSection {
+  margin-top: 5em;
+}
+.countUp div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.networkSection h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 2.5em;
+  margin: auto;
+  font-weight: bold;
+  font-family: "Bruno Ace", cursive;
+  color: #00ff22;
+  background-image: -webkit-linear-gradient(135deg, #00ff22 36%, #85eb2d 45%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.networkSection p {
+  text-align: center;
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+@media screen and (max-width: 926px) {
+  .countUp {
+    width: 95%;
+  }
+  .countUp h4 {
+    font-size: 1.4em;
+  }
+  .countUp p {
+    font-size: 0.6em;
+  }
+
+  .networkSection h1 {
+    text-align: center;
+    width: 90%;
+  }
+  .networkSection p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 716px) {
+  .networkSection h1 {
+    font-size: 2em;
+  }
+}

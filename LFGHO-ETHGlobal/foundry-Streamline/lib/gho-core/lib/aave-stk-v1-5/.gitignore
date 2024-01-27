@@ -1,0 +1,23 @@
+# build and cache
+cache/
+out/
+
+# general
+.env
+
+# editors
+.idea
+.vscode
+
+# well, looks strange to ignore package-lock, but we have only pretter and it's temproray
+package-lock.json
+node_modules
+
+# ignore foundry deploy artifacts
+broadcast/
+
+# certora temp files
+.certora/
+.certora*
+.last_confs/
+resource_errors*

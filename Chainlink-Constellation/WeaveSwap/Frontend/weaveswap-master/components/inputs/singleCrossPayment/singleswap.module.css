@@ -1,0 +1,95 @@
+.crossInputBody {
+  display: flex;
+  background-color: rgb(28, 27, 27);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2em 1em;
+  margin: 1em auto;
+  border-radius: 1em;
+}
+
+.swapInputBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.swapLabel {
+  font-size: 0.9em;
+  color: white;
+  margin-bottom: 0.9em;
+}
+
+.swapInputBody .swapInput {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  outline-color: transparent !important;
+  font-size: 2em;
+}
+
+.swapInputBody .swapInput:hover,
+.swapInputBody .swapInput:active,
+.swapInputBody input[type="text"]:focus {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  outline-color: transparent !important;
+}
+
+.crossChainBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: blueviolet;
+  padding: 1em 2em;
+  border-radius: 0.8em;
+  width: 100%;
+  justify-content: center;
+}
+.errorMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(255, 0, 89);
+  padding: 1em 2em;
+  border-radius: 0.8em;
+  width: 100%;
+  justify-content: center;
+}
+
+.Tooltip {
+  background-color: rgb(21, 15, 15);
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.Tooltip_body {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.whyApprove {
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .swapInputBody {
+    width: 30%;
+  }
+}

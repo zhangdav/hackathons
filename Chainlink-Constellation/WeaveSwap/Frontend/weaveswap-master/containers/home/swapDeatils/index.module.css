@@ -1,0 +1,150 @@
+.Swappage {
+  margin-top: 3em;
+}
+.SwapLiqudity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 4em auto;
+  justify-content: space-between;
+}
+
+.SwapLiqudity h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+.swapText {
+  margin: 5em 0;
+  width: 50%;
+}
+.swapText p {
+  width: 70%;
+  color: gainsboro;
+}
+.swapImg {
+  width: 50%;
+  display: block;
+}
+.swapImg img {
+  width: 500px;
+  max-width: 500px;
+  margin: 0;
+}
+.SwapFlex .swapImg {
+  display: flex;
+  width: 400px;
+  max-width: 400px;
+}
+/* .button */
+
+.swapBtn {
+  font-family: inherit;
+  font-size: 1em;
+  background: linear-gradient(to bottom, #4dc7d9 0%, #66a6ff 100%);
+  color: white;
+  padding: 0.6em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  margin-top: 1em;
+}
+
+.swapBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.swapBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.swapBtn span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.swapBtn svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.swapBtn .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.swapBtn:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swapBtn:hover svg {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1100px) {
+  .SwapLiqudity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em auto;
+  }
+  .swapText {
+    width: 100%;
+  }
+  .SwapLiqudity h1 {
+    text-align: center;
+  }
+  .SwapLiqudity p {
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+  .swapBtn {
+    margin: 2em auto;
+  }
+  .SwapFlex {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .swapImg {
+    width: 100%;
+  }
+  .swapImg img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .SwapFlex .swapImg {
+    display: flex;
+    width: 400px;
+    max-width: 400px;
+  }
+  .swapText {
+    margin: 2em 0;
+    width: 100%;
+  }
+
+  .swapText p {
+    width: 90%;
+    color: gainsboro;
+  }
+  .SwapLiqudity h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+}

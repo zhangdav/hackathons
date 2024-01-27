@@ -1,0 +1,10 @@
+[default]
+src = 'src'
+tests = 'tests'
+out = 'out'
+libs = ['lib']
+solc = "0.8.14"
+remappings = [
+]
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config

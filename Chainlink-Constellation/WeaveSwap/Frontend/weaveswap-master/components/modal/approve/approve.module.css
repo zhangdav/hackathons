@@ -1,0 +1,92 @@
+.ModalBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.activeChain {
+  display: flex;
+  align-items: center;
+  background-color: rgb(83, 226, 43);
+  padding: 1em 2em;
+  width: 100%;
+  border-radius: 0.8em;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.activeChain img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 0.5em;
+}
+
+.Modal div:nth-child(2) {
+  background-color: rgb(0, 0, 0) !important;
+  border-radius: 1em;
+}
+.Modal div:nth-child(1) {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.ModalBody {
+  background-color: rgb(0, 0, 0);
+}
+.ModalHeader {
+  background-color: rgb(0, 0, 0);
+}
+
+.ModalHeader p {
+  font-size: 0.6em;
+  color: white;
+}
+
+.ModalHeader h2 {
+  color: antiquewhite;
+}
+.swapLabel {
+  margin-bottom: 0.5em;
+}
+
+.swapInputBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.swapInputBody input {
+  background-color: black;
+  border-radius: 0.5em;
+}
+
+.Tooltip {
+  background-color: rgb(21, 15, 15);
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.Tooltip_body {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.whyApprove {
+  text-align: center;
+  width: 100%;
+}
+
+.approveBtn {
+  background-color: rgb(101, 226, 43);
+  width: 100%;
+  padding: 1em 2em;
+  margin: 1em auto;
+  border-radius: 0.5em;
+}

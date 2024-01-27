@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap");
+.Banner {
+  margin-bottom: 3em;
+}
+.Banner h1 {
+  font-size: 3em;
+  width: 80%;
+  font-weight: bold;
+  font-family: "Bruno Ace", cursive;
+  text-align: center;
+  margin: auto;
+  padding-top: 0.3em;
+}
+
+.Banner p {
+  font-size: 1em;
+  width: 70%;
+  font-weight: bold;
+  font-family: "Bruno Ace", cursive;
+  text-align: center;
+  margin: auto;
+  padding-top: 1.5em;
+}
+.decentralized {
+  padding: 0 !important;
+  color: #00ff22;
+  background-image: -webkit-linear-gradient(135deg, #00ff22 36%, #85eb2d 45%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.welcome_Banner {
+  margin: 6em auto 1em;
+  display: block;
+  border: 1px solid white;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.btn_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.LaunchBtb {
+  margin: 3em;
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #23770a,
+    #87ff77,
+    #22770a,
+    #0a770c,
+    #77ff90,
+    #0a7713
+  );
+  background-size: 250%;
+  background-position: left;
+  color: #77ff8b;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  padding: 1.5em 6em;
+}
+
+.LaunchBtb::before {
+  position: absolute;
+  content: "Launch App";
+  color: #82ff77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  padding: 1em 2em;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.LaunchBtb:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.LaunchBtb:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.LaunchBtb:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 1200px) {
+  .Banner h1 {
+    width: 90%;
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 733px) {
+  .Banner h1 {
+    width: 95%;
+    font-size: 2em;
+  }
+  .Banner p {
+    width: 96%;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 509px) {
+  .Banner h1 {
+    width: 95%;
+    font-size: 1.5em;
+  }
+}

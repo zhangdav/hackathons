@@ -1,0 +1,63 @@
+.TokensDropdown {
+}
+.TokensDropdown button {
+  background-color: var(--button_color);
+  border-radius: 0.5em;
+  margin: 0.5em auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+}
+.TokensDropdown .TokensDropdown_Button {
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5em;
+  padding: 0;
+  margin: 0.5em auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+}
+.TokensDropdown button span {
+  background-color: var(--button_color);
+  font-size: 1em;
+  padding: 0;
+}
+
+.TokensDropdown button span:hover,
+.TokensDropdown button:hover {
+  background-color: var(--button_color) !important;
+}
+
+.TokensDropdown button span:focus,
+.TokensDropdown button:focus,
+.TokensDropdown button span:active,
+.TokensDropdown button:active,
+.TokensDropdown button span:checked,
+.TokensDropdown button:checked,
+.TokensDropdown button span:checked,
+.TokensDropdown button:checked {
+  outline: none !important;
+  border: none !important;
+  border-width: 0 !important;
+}
+
+@media screen and (max-width: 600px) {
+  .TokensDropdown button {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .TokensDropdown button {
+    font-size: 0.5em;
+  }
+}

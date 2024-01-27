@@ -1,0 +1,31 @@
+.ConnectWalletPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 4em;
+  margin-bottom: 8em;
+}
+
+.ConnectWalletPage h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.ConnectWalletPage p {
+  font-size: 1em;
+  color: aliceblue;
+}
+
+.ConnectWalletPage img {
+  width: 300px;
+}
+
+.ConnectWallet {
+  margin-top: 2em;
+}
+.ConnectWallet button {
+  background-color: rgb(0, 223, 7);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(251, 255, 244);
+  padding: 0.7em 2em;
+}

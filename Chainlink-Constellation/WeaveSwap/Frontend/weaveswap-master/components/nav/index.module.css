@@ -1,0 +1,13 @@
+.Navbar {
+  background-color: black;
+}
+
+.Navbar ul {
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.Navbar ul li a {
+  color: white;
+}
