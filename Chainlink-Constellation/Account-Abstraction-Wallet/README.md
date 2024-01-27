@@ -16,8 +16,6 @@ It can realize cross-chain transactions for a single transaction, and it can als
 </p>
 <br/>
 
-![AA wallet cross chain](https://github.com/Solidityarchitect/cross-chain-erc20/assets/125990317/4ea809f6-9be7-429c-a573-de16b84c6c48)
-
 
 # About
 
