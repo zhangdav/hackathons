@@ -1,0 +1,61 @@
+{
+  "name": "maci-circuits",
+  "version": "1.1.2",
+  "description": "zk-SNARK circuits for MACI",
+  "main": "build/ts/index.js",
+  "files": [
+    "build",
+    "circom",
+    "circomkit.json",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build-test-circuits-c": "ts-node ./ts/compile.ts --cWitness",
+    "build-test-circuits-wasm": "ts-node ./ts/compile.ts",
+    "gen-zkeys": "ts-node ./ts/genZkeys.ts",
+    "watch": "tsc --watch",
+    "build": "tsc -p tsconfig.build.json",
+    "circom:build": "NODE_OPTIONS=--max-old-space-size=4096 circomkit compile",
+    "circom:setup": "NODE_OPTIONS=--max-old-space-size=4096 circomkit setup",
+    "types": "tsc -p tsconfig.json --noEmit",
+    "test": "ts-mocha --exit ts/__tests__/*.test.ts",
+    "test:hasher": "ts-mocha --exit ts/__tests__/Hasher.test.ts",
+    "test:unpackElement": "ts-mocha --exit ts/__tests__/UnpackElement.test.ts",
+    "test:slAndBallotTransformer": "ts-mocha --exit ts/__tests__/StateLeafAndBallotTransformer.test.ts",
+    "test:messageToCommand": "ts-mocha --exit ts/__tests__/MessageToCommand.test.ts",
+    "test:messageValidator": "ts-mocha --exit ts/__tests__/MessageValidator.test.ts",
+    "test:verifySignature": "ts-mocha --exit ts/__tests__/VerifySignature.test.ts",
+    "test:splicer": "ts-mocha --exit ts/__tests__/Splicer.test.ts",
+    "test:ecdh": "ts-mocha --exit ts/__tests__/Ecdh.test.ts",
+    "test:privToPubKey": "ts-mocha --exit ts/__tests__/PrivToPubKey.test.ts",
+    "test:calculateTotal": "ts-mocha --exit ts/__tests__/CalculateTotal.test.ts",
+    "test:processMessages": "NODE_OPTIONS=--max-old-space-size=4096 ts-mocha --exit ts/__tests__/ProcessMessages.test.ts",
+    "test:tallyVotes": "NODE_OPTIONS=--max-old-space-size=4096 ts-mocha --exit ts/__tests__/TallyVotes.test.ts",
+    "test:ceremonyParams": "ts-mocha --exit ts/__tests__/CeremonyParams.test.ts",
+    "test:quinCheckRoot": "ts-mocha --exit ts/__tests__/QuinCheckRoot.test.ts",
+    "test:incrementalQuinTree": "ts-mocha --exit ts/__tests__/IncrementalQuinTree.test.ts"
+  },
+  "dependencies": {
+    "@zk-kit/circuits": "^0.3.0",
+    "circomkit": "^0.0.22",
+    "circomlib": "^2.0.5",
+    "maci-core": "^1.1.2",
+    "maci-crypto": "^1.1.2",
+    "maci-domainobjs": "^1.1.2",
+    "snarkjs": "^0.7.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.16",
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  }
+}

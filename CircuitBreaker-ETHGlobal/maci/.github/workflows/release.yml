@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    tags: ["*"]
+
+env:
+  STATE_TREE_DEPTH: ${{ vars.STATE_TREE_DEPTH }}
+
+jobs:
+  draft-release:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Draft Release
+        run: |
+          gh release create ${GITHUB_REF##*/} --title "${GITHUB_REF##*/}" --draft --generate-notes --prerelease
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+
+      - name: Install
+        run: |
+          git config --global url."https://github.com/".insteadOf git://github.com/
+          pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build
+        run: |
+          pnpm run build
+
+      - name: Publish NPM
+        run: |
+          # Depending on the STATE_TREE_DEPTH param, there 
+          # might be changes in the EmptyBallotRoots.sol file
+          git add contracts/contracts/trees/EmptyBallotRoots.sol
+          git diff --staged --quiet || git commit -m "Commit changes before publishing"
+
+          pnpm exec lerna publish from-git --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

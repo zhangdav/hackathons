@@ -1,0 +1,63 @@
+{
+  "name": "maci-crypto",
+  "version": "1.1.2",
+  "description": "A package containing cryptography utilities for MACI",
+  "main": "build/ts/index.js",
+  "files": [
+    "build",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "watch": "tsc --watch",
+    "benchmarks": "ts-node ts/__benchmarks__/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "types": "tsc -p tsconfig.json --noEmit",
+    "test": "nyc ts-mocha --exit ts/__tests__/*.test.ts",
+    "test:crypto": "ts-mocha --exit ts/__tests__/Crypto.test.ts",
+    "test:accQueue": "ts-mocha --exit ts/__tests__/AccQueue.test.ts",
+    "test:utils": "ts-mocha --exit ts/__tests__/Utils.test.ts",
+    "test:imt": "ts-mocha --exit ts/__tests__/IMT.test.ts",
+    "typedoc": "typedoc --plugin typedoc-plugin-markdown --options ./typedoc.json"
+  },
+  "dependencies": {
+    "@zk-kit/baby-jubjub": "^0.1.1",
+    "@zk-kit/eddsa-poseidon": "^0.5.1",
+    "@zk-kit/poseidon-cipher": "^0.1.1",
+    "ethers": "^6.9.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.16",
+    "benny": "^3.7.1",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "extensions": [
+      ".ts"
+    ],
+    "all": true,
+    "exclude": [
+      "ts/__benchmarks__/**",
+      "**/__tests__/@types/*",
+      "**/__tests__/*.ts",
+      "**/*.js",
+      "**/*.d.ts",
+      "ts/index.ts"
+    ],
+    "branches": ">50%",
+    "lines": ">50%",
+    "functions": ">50%",
+    "statements": ">50%"
+  }
+}

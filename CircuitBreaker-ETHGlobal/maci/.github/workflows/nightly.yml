@@ -1,0 +1,118 @@
+name: Nightly
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  generate-proving-keys:
+    strategy:
+      fail-fast: false
+      matrix:
+        command: ["test:cli", "test:integration"]
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes \
+            build-essential \
+            libgmp-dev \
+            libsodium-dev \
+            nasm \
+            nlohmann-json3-dev
+
+      - name: Install
+        run: |
+          pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build
+        run: |
+          pnpm run build
+
+      - name: Run hardhat fork
+        run: |
+          cd contracts
+          pnpm run hardhat &
+
+      - name: Download rapidsnark (1c137)
+        run: |
+          mkdir -p ~/rapidsnark/build
+          wget -qO ~/rapidsnark/build/prover https://maci-devops-zkeys.s3.ap-northeast-2.amazonaws.com/rapidsnark-linux-amd64-1c137
+          chmod +x ~/rapidsnark/build/prover
+
+      - name: Download circom Binary v2.1.6
+        run: |
+          wget -qO ${{ github.workspace }}/circom https://github.com/iden3/circom/releases/download/v2.1.6/circom-linux-amd64
+          chmod +x ${{ github.workspace }}/circom
+          sudo mv ${{ github.workspace }}/circom /bin/circom
+
+      - name: Create zkeys folder
+        run: |
+          cd cli
+          mkdir -p zkeys
+
+      - name: Compile Circuits And Generate zkeys
+        run: |
+          pnpm build:circuits-c
+          pnpm setup:zkeys
+
+      - name: ${{ matrix.command }}
+        run: pnpm run ${{ matrix.command }}
+
+      - name: Stop Hardhat
+        if: always()
+        run: kill $(lsof -t -i:8545)
+
+  unit:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      - name: Download circom Binary v2.1.6
+        run: |
+          wget -qO ${{ github.workspace }}/circom https://github.com/iden3/circom/releases/download/v2.1.6/circom-linux-amd64
+          chmod +x ${{ github.workspace }}/circom
+          sudo mv ${{ github.workspace }}/circom /bin/circom
+
+      - name: Install
+        run: |
+          pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build
+        run: |
+          pnpm run build
+
+      - name: Test
+        run: pnpm run test

@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+
+env:
+  STATE_TREE_DEPTH: ${{ vars.STATE_TREE_DEPTH }}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    uses: ./.github/workflows/reusable-e2e.yml
+
+  npm-publish:
+    needs: e2e
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install
+        run: |
+          pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build
+        run: |
+          pnpm run build
+
+      - name: Publish Project
+        run: |
+          # Prevent `git commit error` when running `lerna version`
+          # It creates an ephemeral commit that will not be pushed to GitHub
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+
+          # Depending on the STATE_TREE_DEPTH param, there 
+          # might be changes in the EmptyBallotRoots.sol file
+          git add contracts/contracts/trees/EmptyBallotRoots.sol
+          git diff --staged --quiet || git commit -m "Commit changes before publishing"
+
+          lerna version 0.0.0-ci.$(git rev-parse --short HEAD) --no-push --yes --exact
+          lerna publish from-git --dist-tag ci --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

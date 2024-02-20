@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@bandada/api-sdk": "^1.1.0",
+    "@semaphore-protocol/group": "^3.11.0",
+    "@semaphore-protocol/identity": "^3.11.0",
+    "@semaphore-protocol/proof": "^3",
+    "@supabase/supabase-js": "^2.33.2",
+    "dotenv": "^16.4.1",
+    "ethers": "^6.7.1",
+    "node-fetch": "^3.3.2",
+    "supabase": "^1.142.1"
+  }
+}

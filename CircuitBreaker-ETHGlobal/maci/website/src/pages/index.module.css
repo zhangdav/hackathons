@@ -1,0 +1,81 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  position: relative;
+  height: 427px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url("../../static/img/hero.svg");
+  background-position: 0% 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 8rem;
+  color: var(--ifm-color-hero);
+  font-family: ShareTechMono;
+  gap: 1rem;
+}
+
+.heroTitle {
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0rem 0.75rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.1rem;
+}
+
+.heroTagline {
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  width: 100%;
+}
+
+.blue {
+  color: var(--ifm-link-color);
+}
+
+.borderBlue {
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-link-color);
+  text-underline-offset: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 1.5rem;
+  }
+
+  .introduction {
+    padding: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    padding: 0rem 0.5rem;
+  }
+
+  .heroTagline {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}

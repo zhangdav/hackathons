@@ -1,0 +1,17 @@
+build/
+node_modules/
+coverage/
+tmp/
+artifacts/
+cache/
+package-lock.json
+pnpm-lock.yaml
+**/package-lock.json
+CHANGELOG.md
+CODEOWNERS
+.eslintignore
+circuits/ts/verifier_groth16.sol
+website/.docusaurus/
+website/src/pages/solidity-docs/index.md
+**/deployed-contracts.json
+**/deploy-config.json
