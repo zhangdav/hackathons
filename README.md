@@ -13,7 +13,6 @@
 
 ## Online2023-ETHGlobal
 [![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/2436a200-f545-46b8-a26c-c9cc49d00419)](https://ethglobal.com/showcase/happy-planet-wd5s8)
-<img width="1415" alt="image" src="">
 
-## Superhack-ETHGlobal 
-<img width="1426" alt="image" src="https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/0934934b-02d1-4432-80c0-9d636e8e7894">
+## Superhack-ETHGlobal
+[![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/0934934b-02d1-4432-80c0-9d636e8e7894)](https://ethglobal.com/showcase/bymeacrypto-vuygh)
