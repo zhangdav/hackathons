@@ -1,7 +1,3 @@
-# Hackathon Portfolio
-
-![image](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/a88f3c1d-4c47-46d4-afca-5393ef72297c)
-
 ## Chainlink-Block Magic
 [![Chainlink-Block Magic](https://github.com/Solidityarchitect/Hackathon-Portfolio/assets/125990317/0308e68e-9258-4f99-8c5f-e22a6e1f946b)](https://github.com/Solidityarchitect/Trivia-dex)
 
